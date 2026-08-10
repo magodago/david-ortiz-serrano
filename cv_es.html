@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>David Ortiz Serrano — CV</title>
+<style>
+  @page { size: A4; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0A0A0F; --panel: #10101A; --line: #23232E;
+    --text: #F2F2EE; --dim: #9A9AA3; --faint: #62626E;
+    --accent: #4C8DFF;
+  }
+  body { background: #000; font-family: 'Inter', 'Segoe UI', sans-serif; color: var(--text); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 210mm; min-height: 297mm; background: var(--bg); margin: 0 auto; padding: 16mm 15mm; position: relative; }
+  .accent-bar { position: absolute; top: 0; left: 0; right: 0; height: 3mm; background: linear-gradient(90deg, var(--accent), #7FB0FF); }
+  .head { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 1px solid var(--line); padding-bottom: 7mm; }
+  h1 { font-size: 26pt; letter-spacing: 0.01em; font-weight: 700; }
+  h1 span { color: var(--dim); font-weight: 500; }
+  .role { color: var(--accent); font-size: 11pt; font-weight: 600; margin-top: 3mm; letter-spacing: 0.04em; }
+  .tagline { color: var(--dim); font-size: 9.5pt; margin-top: 2.5mm; max-width: 120mm; line-height: 1.5; }
+  .meta { text-align: right; font-size: 8.5pt; color: var(--dim); line-height: 1.8; }
+  .meta a { color: var(--dim); text-decoration: none; }
+  .meta b { color: var(--text); font-weight: 600; }
+  .grid { display: grid; grid-template-columns: 1.55fr 1fr; gap: 8mm; margin-top: 8mm; }
+  h2 { font-size: 10pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 600; margin-bottom: 4.5mm; }
+  .job { margin-bottom: 7mm; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; }
+  .job-org { font-size: 11pt; font-weight: 700; }
+  .job-org .cur { display: inline-block; font-size: 6.5pt; font-weight: 700; letter-spacing: 0.1em; color: #050507; background: var(--accent); padding: 1px 6px; border-radius: 8px; vertical-align: 2px; margin-left: 4px; }
+  .job-years { font-size: 8pt; color: var(--faint); font-family: 'Courier New', monospace; }
+  .job-role { font-size: 9pt; color: var(--dim); margin-top: 1.2mm; }
+  .job-role b { color: var(--text); }
+  .job ul { margin-top: 2.2mm; padding-left: 4.5mm; }
+  .job li { font-size: 8.8pt; color: var(--dim); line-height: 1.55; margin-bottom: 1.4mm; }
+  .job li::marker { color: var(--accent); }
+  .job li b { color: var(--text); font-weight: 600; }
+  .side-card { background: var(--panel); border: 1px solid var(--line); border-radius: 4mm; padding: 6mm; margin-bottom: 6mm; }
+  .cap { display: flex; gap: 3mm; align-items: baseline; margin-bottom: 3.2mm; }
+  .cap-code { font-size: 7pt; color: var(--accent); font-family: 'Courier New', monospace; }
+  .cap b { font-size: 9pt; display: block; }
+  .cap span { font-size: 8pt; color: var(--dim); line-height: 1.45; display: block; margin-top: 0.8mm; }
+  .edu p { font-size: 8.8pt; color: var(--dim); line-height: 1.55; }
+  .edu b { color: var(--text); }
+  .clients { display: flex; flex-wrap: wrap; gap: 2mm; margin-top: 2mm; }
+  .client { font-size: 8pt; font-weight: 600; color: var(--text); border: 1px solid var(--line); border-radius: 6px; padding: 2mm 3.5mm; background: #0D0D14; }
+  .lang { font-size: 8.8pt; color: var(--dim); line-height: 1.7; }
+  .lang b { color: var(--text); }
+  .foot { margin-top: 8mm; padding-top: 4mm; border-top: 1px solid var(--line); display: flex; justify-content: space-between; font-size: 7.5pt; color: var(--faint); }
+  .foot a { color: var(--faint); }
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="accent-bar"></div>
+
+  <div class="head">
+    <div>
+      <h1>David Ortiz <span>Serrano</span></h1>
+      <div class="role">AI STRATEGY &amp; PROJECT LEAD</div>
+      <div class="tagline">Convierto la estrategia de IA en ejecución real. Más de 15 años liderando proyectos tecnológicos en banca y empresa — ahora liderando el Laboratorio de IA en GFT.</div>
+    </div>
+    <div class="meta">
+      <b>Madrid, España</b><br>
+      <a href="mailto:dortizs76@gmail.com">dortizs76@gmail.com</a><br>
+      <a href="tel:+34658237988">+34 658 237 988</a><br>
+      <a href="https://www.linkedin.com/in/david-ortiz-serrano-376688ab">linkedin.com/in/david-ortiz-serrano</a><br>
+      <a href="https://personas.omi.me/u/david4">personas.omi.me/u/david4</a>
+    </div>
+  </div>
+
+  <div class="grid">
+    <div>
+      <h2>Experiencia Profesional</h2>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-org">GFT IT Consulting <span class="cur">ACTUAL</span></span>
+          <span class="job-years">2016 — ACTUALIDAD</span>
+        </div>
+        <div class="job-role"><b>Liderazgo estratégico del Laboratorio de IA</b> · IA y Transformación Digital</div>
+        <ul>
+          <li>Liderazgo estratégico del <b>Laboratorio de IA</b>: estrategia, roadmap y entrega de soluciones de IA.</li>
+          <li>Definición y ejecución de estrategias de transformación digital para clientes clave: <b>BBVA, Deutsche Bank y BANKIA</b>.</li>
+          <li>Coordinación de equipos multidisciplinares para la implementación de soluciones basadas en Inteligencia Artificial.</li>
+          <li>Gestión integral de proyectos bajo metodologías <b>Waterfall y Agile</b> — optimizando tiempo, recursos y calidad en cada entrega.</li>
+          <li>Supervisión del roadmap tecnológico, priorización de iniciativas y alineación de los objetivos estratégicos con las necesidades del negocio.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-org">SOTEC</span>
+          <span class="job-years">2011 — 2016</span>
+        </div>
+        <div class="job-role"><b>Dirección ágil de proyectos</b> · Banca Empresarial</div>
+        <ul>
+          <li>Dirección ágil de proyectos tecnológicos para <b>ISBAN</b>.</li>
+          <li>Transición de la entrega tecnológica al liderazgo de equipos: entrega, calidad y personas.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <span class="job-org">CALCULO</span>
+          <span class="job-years">2000 — 2011</span>
+        </div>
+        <div class="job-role"><b>Análisis funcional y desarrollo senior</b> · Soluciones Empresariales</div>
+        <ul>
+          <li>Análisis funcional y desarrollo senior en soluciones empresariales para <b>MAPFRE</b>.</li>
+          <li>Base profunda en cómo funciona la tecnología empresarial — desde dentro.</li>
+        </ul>
+      </div>
+
+      <h2 style="margin-top: 2mm;">Formación</h2>
+      <div class="job" style="margin-bottom:0;">
+        <div class="job-role"><b>Máster en herramientas prácticas de Inteligencia Artificial</b> — especializado en herramientas prácticas de IA para la optimización empresarial.</div>
+      </div>
+    </div>
+
+    <div>
+      <h2>Capacidades de IA</h2>
+      <div class="side-card">
+        <div class="cap"><span class="cap-code">/01</span><div><b>Estrategia de IA</b><span>Qué debe hacer la IA por el negocio — y qué no. Roadmaps y priorización.</span></div></div>
+        <div class="cap"><span class="cap-code">/02</span><div><b>Liderazgo de proyectos de IA</b><span>Equipos multidisciplinares, ciclo de vida completo, Waterfall y Agile.</span></div></div>
+        <div class="cap"><span class="cap-code">/03</span><div><b>Transformación con IA</b><span>Integrar la IA en personas, procesos y tecnología.</span></div></div>
+        <div class="cap"><span class="cap-code">/04</span><div><b>Entrega de proyectos</b><span>Tiempo, recursos y calidad en proyectos empresariales complejos.</span></div></div>
+        <div class="cap"><span class="cap-code">/05</span><div><b>Transformación digital</b><span>Roadmaps tecnológicos para líderes bancarios.</span></div></div>
+        <div class="cap"><span class="cap-code">/06</span><div><b>Alineación con el negocio</b><span>Cada iniciativa responde a una pregunta de negocio.</span></div></div>
+      </div>
+
+      <h2>Confianza Empresarial</h2>
+      <div class="side-card">
+        <div class="clients">
+          <span class="client">BBVA</span><span class="client">Deutsche Bank</span><span class="client">BANKIA</span><span class="client">ISBAN</span><span class="client">MAPFRE</span>
+        </div>
+      </div>
+
+      <h2>Idiomas</h2>
+      <div class="side-card lang">
+        <b>Español</b> — Nativo<br>
+        <b>Inglés</b> — Conversacional
+      </div>
+
+      <h2>Más Allá de la Tecnología</h2>
+      <div class="side-card lang">
+        Mago · Mentalista · Hipnotizador — <b>25+ años</b>. Una disciplina de atención, percepción y narrativa que afina la comunicación, la observación y el pensamiento lateral. <b>Piensa diferente. Ve lo que otros no ven.</b>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>© 2026 David Ortiz Serrano</span>
+    <span>AI Strategy &amp; Project Lead — Madrid · Empresa · IA</span>
+  </div>
+</div>
+</body>
+</html>
