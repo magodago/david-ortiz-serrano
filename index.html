@@ -587,8 +587,8 @@ scene.add(pulses);
 /* primer frame sincrono: garantiza pintado aunque rAF vaya con retraso (headless/background) */
 composer.render();
 
-/* raton */
-var mouse = new THREE.Vector2(999, 999);
+/* raton (0,0 = centrado; NUNCA usar sentinela 999: la camara volaria al infinito en el primer frame) */
+var mouse = new THREE.Vector2(0, 0);
 var mouse3 = new THREE.Vector3();
 addEventListener('pointermove', function(e){
   mouse.x = (e.clientX/innerWidth)*2-1;
