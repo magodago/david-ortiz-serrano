@@ -584,6 +584,9 @@ var pulseMat = new THREE.PointsMaterial({color:0xff0044, size:0.2, transparent:t
 var pulses = new THREE.Points(pulseGeo, pulseMat);
 scene.add(pulses);
 
+/* primer frame sincrono: garantiza pintado aunque rAF vaya con retraso (headless/background) */
+composer.render();
+
 /* raton */
 var mouse = new THREE.Vector2(999, 999);
 var mouse3 = new THREE.Vector3();
