@@ -138,12 +138,11 @@
   .stat .num{font-family:var(--mono);font-size:clamp(1.7rem,3.4vw,2.6rem);color:var(--green);line-height:1}
   .stat .num span{color:var(--cream)}
   .stat .cap{font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--dim);margin-top:.8rem;line-height:1.7}
-  .portrait{position:relative;width:min(320px,100%);margin:0 auto 2.8rem}
-  .portrait img{width:100%;aspect-ratio:3/4;object-fit:cover;filter:saturate(.85);border:1px solid rgba(61,139,255,.25);transition:filter .5s,border-color .5s}
-  .portrait:hover img{filter:saturate(1.08);border-color:rgba(61,139,255,.55)}
-  .portrait::before{content:"";position:absolute;top:-10px;left:-10px;width:46px;height:46px;border-top:1px solid var(--blue);border-left:1px solid var(--blue)}
-  .portrait::after{content:"";position:absolute;bottom:-10px;right:-10px;width:46px;height:46px;border-bottom:1px solid var(--orange);border-right:1px solid var(--orange)}
-  .portrait .p-cap{position:absolute;left:0;right:0;bottom:0;padding:.8rem 1rem;background:linear-gradient(to top,rgba(7,11,21,.9),transparent);font-family:var(--mono);font-size:.56rem;letter-spacing:.3em;color:var(--cream);text-transform:uppercase;text-align:center}
+  .portrait{position:relative;width:min(190px,60vw);margin:0 auto 2.6rem}
+  .portrait img{width:100%;height:auto;display:block;filter:saturate(.9);border:1px solid rgba(61,139,255,.3);transition:filter .5s,border-color .5s}
+  .portrait:hover img{filter:saturate(1.05);border-color:rgba(61,139,255,.6)}
+  .portrait::before{content:"";position:absolute;top:-10px;left:-10px;width:38px;height:38px;border-top:1px solid var(--blue);border-left:1px solid var(--blue)}
+  .portrait::after{content:"";position:absolute;bottom:-10px;right:-10px;width:38px;height:38px;border-bottom:1px solid var(--orange);border-right:1px solid var(--orange)}
 
   /* ---------- capabilities ---------- */
   .cap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
@@ -292,7 +291,6 @@
       <div class="ctas fade">
         <a class="btn solid" href="#contact" data-magnet data-en="<span>Let's build what's next</span>" data-es="<span>Construyamos lo que viene</span>"><span>Let's build what's next</span></a>
         <a class="btn" href="docs/CV_David_Ortiz.pdf" target="_blank" rel="noopener" data-magnet data-en="<span>Download full CV</span>" data-es="<span>Descargar CV completo</span>"><span>Download full CV</span></a>
-        <a class="btn red" href="https://personas.omi.me/u/david4" target="_blank" rel="noopener" data-magnet data-en="<span>Ask my AI clone</span>" data-es="<span>Pregunta a mi clon IA</span>"><span>Ask my AI clone</span></a>
       </div>
       <div class="trust fade">
         <span class="t-label" data-en="Enterprise trust" data-es="Confianza empresarial">Enterprise trust</span>
@@ -323,7 +321,6 @@
         <div>
           <div class="portrait">
             <img src="assets/david.webp" alt="David Ortiz Serrano" width="942" height="1178">
-            <div class="p-cap" data-en="AI Strategy &amp; Project Lead" data-es="AI Strategy &amp; Project Lead">AI Strategy &amp; Project Lead</div>
           </div>
           <div class="stats">
             <div class="stat"><div class="num" data-count="25" data-suffix="+">0+</div><div class="cap" data-en="Years in technology — developer to AI Lab leader" data-es="Años en tecnología — de desarrollador a líder de AI Lab">Years in technology</div></div>
@@ -364,8 +361,8 @@
         <div class="tl-item">
           <div class="head"><span class="company">GFT IT Consulting</span><span class="period">2016 — Present</span><span class="current" data-en="CURRENT" data-es="ACTUAL">CURRENT</span></div>
           <div class="role" data-en="AI project leadership · Agent governance &amp; product ideation · AI Lab, GFT" data-es="Liderazgo de proyectos IA · Gobernanza de agentes e ideación de producto · AI Lab, GFT">AI project leadership · Agent governance &amp; product ideation · AI Lab, GFT</div>
-          <div class="l-en"><p>Leading <b>AI projects</b> inside the AI Lab of GFT for <b>BBVA, Deutsche Bank and BANKIA</b> — with a focus on <b>agent governance</b>: enterprise architecture, security and control of AI agents, and the <b>quality gates</b> that review agent deliveries before they reach production. Alongside delivery, working on <b>agentic product ideas</b> — turning them into concepts with real business potential.</p></div>
-          <div class="l-es" hidden><p>Liderando <b>proyectos de IA</b> en el AI Lab de GFT para <b>BBVA, Deutsche Bank y BANKIA</b> — con foco en <b>gobernanza de agentes</b>: arquitectura empresarial, seguridad y control de agentes de IA, y los <b>quality gates</b> que revisan las entregas de los agentes antes de producción. Además, trabajando en <b>ideas de producto agéntico</b> — convirtiéndolas en conceptos con potencial real de negocio.</p></div>
+          <div class="l-en"><p>Leading <b>AI projects with agents</b> inside the AI Lab of GFT for enterprise environments across <b>banking, insurance and industry</b> — with a focus on <b>agent governance</b>: enterprise architecture, security and control of AI agents, and the <b>quality gates</b> that review agent deliveries before they reach production. Alongside delivery, working on <b>agentic product ideas</b> — turning them into concepts with real business potential.</p></div>
+          <div class="l-es" hidden><p>Liderando <b>proyectos de IA con agentes</b> en el AI Lab de GFT para entornos empresariales de <b>banca, seguros e industria</b> — con foco en <b>gobernanza de agentes</b>: arquitectura empresarial, seguridad y control de agentes de IA, y los <b>quality gates</b> que revisan las entregas de los agentes antes de producción. Además, trabajando en <b>ideas de producto agéntico</b> — convirtiéndolas en conceptos con potencial real de negocio.</p></div>
           <div class="tags"><span>Agent Governance</span><span>Quality Gates</span><span>AI Projects</span><span>Security &amp; Control</span><span>Agentic Product Ideation</span><span>Digital Transformation</span></div>
         </div>
         <div class="tl-item">
@@ -448,7 +445,6 @@
       <div class="roles"><b data-en="AI Director" data-es="AI Director">AI Director</b><span> · </span><b data-en="Head of AI" data-es="Head of AI">Head of AI</b><span> · </span><b data-en="Technology Director" data-es="Technology Director">Technology Director</b><span> · </span><b data-en="CIO" data-es="CIO">CIO</b><span> · </span><b data-en="CTO" data-es="CTO">CTO</b><span> · </span><b data-en="Innovation Director" data-es="Innovation Director">Innovation Director</b></div>
       <div class="ctas">
         <a class="btn solid" href="https://www.linkedin.com/in/david-ortiz-serrano-376688ab?utm_source=personal_web&utm_campaign=contact" target="_blank" rel="noopener" data-magnet data-en="<span>Connect on LinkedIn</span>" data-es="<span>Conectar en LinkedIn</span>"><span>Connect on LinkedIn</span></a>
-        <a class="btn" href="https://personas.omi.me/u/david4" target="_blank" rel="noopener" data-magnet data-en="<span>Ask my AI clone</span>" data-es="<span>Pregunta a mi clon IA</span>"><span>Ask my AI clone</span></a>
         <a class="btn red" href="docs/CV_David_Ortiz_ES.pdf" target="_blank" rel="noopener" data-magnet data-en="<span>Download CV (ES)</span>" data-es="<span>Descargar CV (ES)</span>"><span>Download CV (ES)</span></a>
       </div>
       <div class="contact-line">
