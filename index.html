@@ -781,6 +781,12 @@ if(location.search.indexOf('qa') > -1){
     }
   }, 500);
 }
+/* hook QA: ?sec=id salta a la seccion para capturarla */
+var secParam = location.search.match(/[?&]sec=([a-z]+)/);
+if(secParam){
+  var secEl = document.getElementById(secParam[1]);
+  if(secEl) window.addEventListener('load', function(){ secEl.scrollIntoView(true); });
+}
 </script>
 </body>
 </html>
