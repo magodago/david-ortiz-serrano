@@ -282,24 +282,24 @@
   <!-- HERO -->
   <section id="hero">
     <div class="wrap">
-      <div class="badge" data-en="AI Strategy &amp; Project Lead — Madrid" data-es="AI Strategy &amp; Project Lead — Madrid">AI Strategy &amp; Project Lead — Madrid</div>
+      <div class="badge fade" data-en="AI Strategy &amp; Project Lead — Madrid" data-es="AI Strategy &amp; Project Lead — Madrid">AI Strategy &amp; Project Lead — Madrid</div>
       <h1>
         <span class="word"><span>DAVID</span></span> <span class="word"><span>ORTIZ</span></span><br>
         <span class="word"><span class="ln2">SERRANO</span></span>
       </h1>
-      <div class="tagline"><span class="t-text" data-en="I turn AI strategy into real-world execution." data-es="Convierto la estrategia de IA en ejecución real.">I turn AI strategy into real-world execution.</span><span class="t-cur"></span></div>
-      <p class="sub" data-en="I lead the projects that make AI real in the enterprise — aligning technology, business and people to deliver what strategy promises." data-es="Lidero los proyectos que hacen real la IA en la empresa — alineando tecnología, negocio y personas para entregar lo que la estrategia promete.">I lead the projects that make AI real in the enterprise — aligning technology, business and people to deliver what strategy promises.</p>
-      <div class="ctas">
+      <div class="tagline fade"><span class="t-text" data-en="I turn AI strategy into real-world execution." data-es="Convierto la estrategia de IA en ejecución real.">I turn AI strategy into real-world execution.</span><span class="t-cur"></span></div>
+      <p class="sub fade" data-en="I lead the projects that make AI real in the enterprise — aligning technology, business and people to deliver what strategy promises." data-es="Lidero los proyectos que hacen real la IA en la empresa — alineando tecnología, negocio y personas para entregar lo que la estrategia promete.">I lead the projects that make AI real in the enterprise — aligning technology, business and people to deliver what strategy promises.</p>
+      <div class="ctas fade">
         <a class="btn solid" href="#contact" data-magnet data-en="<span>Let's build what's next</span>" data-es="<span>Construyamos lo que viene</span>"><span>Let's build what's next</span></a>
         <a class="btn" href="docs/CV_David_Ortiz.pdf" target="_blank" rel="noopener" data-magnet data-en="<span>Download full CV</span>" data-es="<span>Descargar CV completo</span>"><span>Download full CV</span></a>
         <a class="btn red" href="https://personas.omi.me/u/david4" target="_blank" rel="noopener" data-magnet data-en="<span>Ask my AI clone</span>" data-es="<span>Pregunta a mi clon IA</span>"><span>Ask my AI clone</span></a>
       </div>
-      <div class="trust">
+      <div class="trust fade">
         <span class="t-label" data-en="Enterprise trust" data-es="Confianza empresarial">Enterprise trust</span>
         <span class="t-logo">BBVA</span><span class="t-logo">Deutsche Bank</span><span class="t-logo">BANKIA</span><span class="t-logo">ISBAN</span><span class="t-logo">MAPFRE</span>
       </div>
     </div>
-    <div class="scroll-hint" data-en="<span>Scroll</span><div class='line'></div>" data-es="<span>Scroll</span><div class='line'></div>"><span>Scroll</span><div class="line"></div></div>
+    <div class="scroll-hint fade" data-en="<span>Scroll</span><div class='line'></div>" data-es="<span>Scroll</span><div class='line'></div>"><span>Scroll</span><div class="line"></div></div>
   </section>
 
   <!-- 01 ABOUT -->
@@ -740,11 +740,7 @@ document.querySelectorAll('section').forEach(function(sec){
 });
 ScrollTrigger.create({trigger:'#hero', start:'top top', once:true, onEnter:function(){
   document.getElementById('hero').classList.add('in');
-  gsap.to('#hero .badge, #hero .tagline, #hero .sub, #hero .ctas, #hero .trust, #hero .scroll-hint', {opacity:1, y:0, duration:.9, stagger:.1, ease:'power3.out'});
 }});
-['#hero .badge','#hero .tagline','#hero .sub','#hero .ctas','#hero .trust','#hero .scroll-hint'].forEach(function(s){
-  var el = document.querySelector(s); if(el){ el.style.opacity = 0; }
-});
 document.querySelectorAll('.num[data-count]').forEach(function(el){
   ScrollTrigger.create({trigger:el, start:'top 85%', once:true, onEnter:function(){
     var target = parseInt(el.getAttribute('data-count'),10);
@@ -775,7 +771,14 @@ if(window.__ready) onSiteReady(); else document.addEventListener('site-ready', o
 if(location.search.indexOf('qa') > -1){
   setInterval(function(){
     var el = document.getElementById('qainfo');
-    if(el) el.textContent = innerWidth + 'x' + innerHeight + ' sw=' + document.documentElement.scrollWidth + ' sh=' + document.documentElement.scrollHeight;
+    if(el){
+      var img = document.querySelector('.portrait img');
+      var r = img ? img.getBoundingClientRect() : null;
+      var sc = document.querySelector('#about') ? document.querySelector('#about').getBoundingClientRect() : null;
+      el.textContent = innerWidth + 'x' + innerHeight + ' sw=' + document.documentElement.scrollWidth
+        + ' about_top=' + (sc ? Math.round(sc.top) : '?')
+        + ' img=' + (img ? (img.complete + '/' + img.naturalWidth + '/' + Math.round(r.top) + ',' + Math.round(r.left)) : 'none');
+    }
   }, 500);
 }
 </script>
