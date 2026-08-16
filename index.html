@@ -784,6 +784,8 @@ if(location.search.indexOf('qa') > -1){
 /* hook QA: ?sec=id salta a la seccion para capturarla */
 var secParam = location.search.match(/[?&]sec=([a-z]+)/);
 if(secParam){
+  document.documentElement.style.scrollBehavior = 'auto';
+  document.querySelectorAll('section').forEach(function(s){ s.classList.add('in'); });
   var secEl = document.getElementById(secParam[1]);
   if(secEl) secEl.scrollIntoView(true);
 }
