@@ -2,7 +2,7 @@
 <html lang="en" data-lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>David Ortiz Serrano — AI Strategy &amp; Project Lead | Madrid</title>
 <meta name="description" content="I turn AI strategy into real-world execution. AI Strategy & Project Lead — Madrid. Enterprise AI, agent governance, quality gates.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -213,11 +213,6 @@
   .contact-line{margin-top:3rem;font-family:var(--mono);font-size:.78rem;color:var(--dim);display:flex;gap:2.2rem;flex-wrap:wrap;justify-content:center}
   .contact-line a{color:var(--cream);transition:color .3s}
   .contact-line a:hover{color:var(--green)}
-  .marquee{position:relative;width:100vw;left:50%;transform:translateX(-50%);overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1rem 0;margin:3.6rem 0;pointer-events:none}
-  .marquee .track{display:flex;gap:3rem;width:max-content;animation:scroll 30s linear infinite;white-space:nowrap}
-  .marquee span{font-family:var(--disp);font-size:1.15rem;color:var(--dim);letter-spacing:.14em}
-  .marquee span i{color:var(--green);font-style:normal;margin:0 .5rem}
-  @keyframes scroll{to{transform:translateX(-50%)}}
   footer{padding:2.2rem clamp(1.3rem,5vw,4.5rem);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-family:var(--mono);font-size:.6rem;letter-spacing:.26em;text-transform:uppercase;color:var(--dimmer);border-top:1px solid var(--line)}
   footer b{color:var(--green);font-weight:400}
 
@@ -240,6 +235,16 @@
   .book .meta p{font-size:.78rem;color:var(--dim);line-height:1.7;flex:1}
   .book .amz{font-family:var(--mono);font-size:.6rem;letter-spacing:.24em;color:var(--green);text-transform:uppercase;margin-top:.9rem;display:inline-flex;align-items:center;gap:.45rem;transition:color .3s}
   .book:hover .amz{color:var(--blue)}
+  .book-intro{max-width:74ch;margin-top:1.8rem;color:var(--dim);line-height:1.95;font-size:.95rem}
+  .book-intro p{margin-top:1.1rem}
+  .book-intro p b{color:var(--cream);font-weight:400}
+  .book.soon{cursor:default;grid-column:1/-1;justify-self:center;width:min(100%,340px);margin-top:.8rem}
+  .book .badge{font-family:var(--mono);font-size:.58rem;letter-spacing:.3em;color:var(--orange);border:1px solid rgba(255,138,61,.4);padding:.4rem .7rem;align-self:flex-start;background:rgba(255,138,61,.06)}
+  .book.soon .cover img{filter:saturate(.88)}
+  @media (pointer:coarse){
+    .book:hover,.cap:hover{transform:none}
+    .book:hover .cover img{transform:none;filter:saturate(.95)}
+  }
   .series{margin-top:2rem;border:1px solid var(--line);background:rgba(14,21,38,.4);padding:1.3rem 1.5rem;display:flex;align-items:center;gap:1.3rem;flex-wrap:wrap}
   .series .series-tag{font-family:var(--mono);font-size:.6rem;letter-spacing:.3em;color:var(--dim);text-transform:uppercase}
   .series .series-links{display:flex;gap:1.2rem;flex-wrap:wrap}
@@ -467,6 +472,20 @@
     <div class="wrap">
       <div class="sec-tag" data-en="06 — Books &amp; Writing" data-es="06 — Libros y Escritura">06 — Books &amp; Writing</div>
       <h2 data-en="Fiction and AI — <em>two ways of solving patterns.</em>" data-es="Ficción e IA — <em>dos formas de resolver patrones.</em>">Fiction and AI — <em>two ways of solving patterns.</em></h2>
+      <div class="book-intro l-en">
+        <p>I write for two reasons, and both have been with me for years.</p>
+        <p>The <b>puzzle books</b> come from childhood — those Barco de Vapor stories that hid a mystery between their pages and taught me that reading is also playing. Today I build my own: deduction cases you solve with a pencil.</p>
+        <p>The <b>AI guides</b> come from my work. Twenty-five years helping companies make technology real, distilled into prompts and methods anyone can apply — including the ones I use every day leading AI projects.</p>
+        <p>And then there are the <b>novels</b>. The ones I have carried in my head for years, releasing one by one. The next one is already on its way.</p>
+        <p>One more confession: I am also a <b>magician</b>. Someday, that world will have its book.</p>
+      </div>
+      <div class="book-intro l-es" hidden>
+        <p>Escribo por dos motivos, y los dos llevan años conmigo.</p>
+        <p>Los <b>libro-juegos</b> me vienen de la infancia — de aquellos Barco de Vapor que escondían un misterio entre sus páginas y me enseñaron que leer también es jugar. Hoy construyo los míos: casos de deducción que se resuelven a lápiz.</p>
+        <p>Las <b>guías de IA</b> me vienen del trabajo. Veinticinco años ayudando a empresas a hacer real la tecnología, resumidos en prompts y métodos que cualquiera puede aplicar — incluidos los que uso cada día liderando proyectos de IA.</p>
+        <p>Y luego están las <b>novelas</b>. Las que llevo en la cabeza desde hace años y voy sacando poco a poco, una a una. La próxima ya está en camino.</p>
+        <p>Una confesión más: también soy <b>mago</b>. Algún día, ese mundo tendrá su libro.</p>
+      </div>
       <div class="book-grid">
         <a class="book fade" href="https://www.amazon.es/dp/B0HFYK9545" target="_blank" rel="noopener">
           <div class="cover"><img src="assets/books/club-del-crimen.jpg" alt="EL CLUB DEL CRIMEN" loading="lazy"></div>
@@ -495,14 +514,20 @@
             <span class="amz" data-en="Amazon ↗" data-es="Amazon ↗">Amazon ↗</span>
           </div>
         </a>
+        <div class="book soon fade">
+          <div class="cover"><img src="assets/books/testigo.jpg" alt="EL TESTIGO QUE NO PODÍA MENTIR" loading="lazy"></div>
+          <div class="meta">
+            <div class="badge" data-en="COMING SOON" data-es="PRÓXIMAMENTE">COMING SOON</div>
+            <h3>EL TESTIGO QUE NO PODÍA MENTIR</h3>
+            <p data-en="The next novel — Case Vega Salas #1. Final review underway. Very soon." data-es="La próxima novela — Caso Vega Salas #1. En revisión final. Muy pronto.">The next novel — Case Vega Salas #1.</p>
+          </div>
+        </div>
       </div>
       <div class="series fade">
-        <span class="series-tag" data-en="The AI workbook series" data-es="La serie de guías IA">The AI workbook series</span>
+        <span class="series-tag" data-en="AI guides — direct sale" data-es="Guías de IA — venta directa">AI guides — direct sale</span>
         <div class="series-links">
-          <a href="https://www.amazon.es/dp/B0H6Y7P94G" target="_blank" rel="noopener">ChatGPT para Profesores</a>
-          <a href="https://www.amazon.es/dp/B0GX2YCSBH" target="_blank" rel="noopener">ChatGPT para Abogados</a>
-          <a href="https://www.amazon.es/dp/B0H6YB2TMG" target="_blank" rel="noopener">ChatGPT para Recursos Humanos</a>
-          <a href="https://www.amazon.es/dp/B0GXNTJPXD" target="_blank" rel="noopener">ChatGPT para Agentes Inmobiliarios</a>
+          <!-- REEMPLAZAR neolabs.me por las URLs directas de las guias cuando David las pase -->
+          <a href="https://neolabs.me" target="_blank" rel="noopener" data-en="Available now — not on Amazon" data-es="Disponibles ahora — no están en Amazon">neolabs.me</a>
         </div>
       </div>
       <div class="books-cta fade">
@@ -528,10 +553,6 @@
         <span data-en="Madrid, Spain" data-es="Madrid, España">Madrid, Spain</span>
       </div>
     </div>
-    <div class="marquee"><div class="track">
-      <span>STRATEGY<i>→</i>EXECUTION<i>✦</i>AGENT GOVERNANCE<i>✦</i>QUALITY GATES<i>✦</i>ENTERPRISE AI<i>✦</i>25+ YEARS<i>✦</i></span>
-      <span>STRATEGY<i>→</i>EXECUTION<i>✦</i>AGENT GOVERNANCE<i>✦</i>QUALITY GATES<i>✦</i>ENTERPRISE AI<i>✦</i>25+ YEARS<i>✦</i></span>
-    </div></div>
     <footer>
       <span>© 2026 David Ortiz Serrano</span>
       <span><b>MADRID</b> · ENTERPRISE · AI</span>
