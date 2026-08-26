@@ -223,6 +223,30 @@
 
   #progress{position:fixed;top:0;left:0;height:2px;width:100%;z-index:60;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--blue),var(--orange))}
 
+  /* ---------- books ---------- */
+  #books .book-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem}
+  @media (max-width:1100px){#books .book-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:640px){#books .book-grid{grid-template-columns:1fr}}
+  .book{position:relative;display:flex;flex-direction:column;gap:1.3rem;border:1px solid var(--line);background:rgba(17,17,32,.45);padding:1.4rem;transition:border-color .35s,transform .35s}
+  .book::after{content:"";position:absolute;top:-1px;left:-1px;width:26px;height:26px;border-top:1px solid var(--green);border-left:1px solid var(--green);opacity:0;transition:opacity .35s}
+  .book:hover{border-color:rgba(61,139,255,.45);transform:translateY(-4px)}
+  .book:hover::after{opacity:1}
+  .book .cover{position:relative;aspect-ratio:2/3;overflow:hidden;border:1px solid var(--line);background:#0a0a14}
+  .book .cover img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.95);transition:filter .5s,transform .5s}
+  .book:hover .cover img{filter:saturate(1.05);transform:scale(1.02)}
+  .book .meta{display:flex;flex-direction:column;flex:1}
+  .book .meta .n{font-family:var(--mono);font-size:.62rem;color:var(--orange);letter-spacing:.2em}
+  .book .meta h3{font-family:var(--disp);font-size:1.06rem;color:var(--cream);margin:.55rem 0 .5rem;line-height:1.2}
+  .book .meta p{font-size:.78rem;color:var(--dim);line-height:1.7;flex:1}
+  .book .amz{font-family:var(--mono);font-size:.6rem;letter-spacing:.24em;color:var(--green);text-transform:uppercase;margin-top:.9rem;display:inline-flex;align-items:center;gap:.45rem;transition:color .3s}
+  .book:hover .amz{color:var(--blue)}
+  .series{margin-top:2rem;border:1px solid var(--line);background:rgba(14,21,38,.4);padding:1.3rem 1.5rem;display:flex;align-items:center;gap:1.3rem;flex-wrap:wrap}
+  .series .series-tag{font-family:var(--mono);font-size:.6rem;letter-spacing:.3em;color:var(--dim);text-transform:uppercase}
+  .series .series-links{display:flex;gap:1.2rem;flex-wrap:wrap}
+  .series .series-links a{font-family:var(--mono);font-size:.68rem;color:var(--cream);letter-spacing:.06em;transition:color .3s}
+  .series .series-links a:hover{color:var(--green)}
+  #books .books-cta{margin-top:2.4rem;display:flex;justify-content:center}
+
   /* ---------- responsive ---------- */
   @media (max-width:700px){
     section{padding:4.5rem 1.4rem 3.5rem}
@@ -271,7 +295,8 @@
     <a href="#career" data-sec="career" data-en="03 · What I've Led" data-es="03 · Mi Trayectoria">03 · What I've Led</a>
     <a href="#mindset" data-sec="mindset" data-en="04 · AI Mindset" data-es="04 · Mentalidad IA">04 · AI Mindset</a>
     <a href="#difference" data-sec="difference" data-en="05 · Difference" data-es="05 · Diferencia">05 · Difference</a>
-    <a href="#contact" data-sec="contact" data-en="06 · Contact" data-es="06 · Contacto">06 · Contact</a>
+    <a href="#books" data-sec="books" data-en="06 · Books" data-es="06 · Libros">06 · Books</a>
+    <a href="#contact" data-sec="contact" data-en="07 · Contact" data-es="07 · Contacto">07 · Contact</a>
   </nav>
   <div class="lang"><button id="lang-en" class="on">EN</button><button id="lang-es">ES</button></div>
   <button class="burger" id="burger" aria-label="Menu"><i></i><i></i><i></i></button>
@@ -437,10 +462,60 @@
     </div>
   </section>
 
-  <!-- 06 CONTACT -->
+  <!-- 06 BOOKS -->
+  <section id="books">
+    <div class="wrap">
+      <div class="sec-tag" data-en="06 — Books &amp; Writing" data-es="06 — Libros y Escritura">06 — Books &amp; Writing</div>
+      <h2 data-en="Fiction and AI — <em>two ways of solving patterns.</em>" data-es="Ficción e IA — <em>dos formas de resolver patrones.</em>">Fiction and AI — <em>two ways of solving patterns.</em></h2>
+      <div class="book-grid">
+        <a class="book fade" href="https://www.amazon.es/dp/B0HFYK9545" target="_blank" rel="noopener">
+          <div class="cover"><img src="assets/books/club-del-crimen.jpg" alt="EL CLUB DEL CRIMEN" loading="lazy"></div>
+          <div class="meta">
+            <div class="n">/01</div>
+            <h3>EL CLUB DEL CRIMEN</h3>
+            <p data-en="100 deduction cases to solve with a pencil. A murder-mystery puzzle book — read the evidence, name the killer." data-es="100 casos de deducción para resolver a lápiz. Un libro-juego de crímenes — lee las pruebas, nombra al culpable.">100 deduction cases to solve with a pencil.</p>
+            <span class="amz" data-en="Amazon ↗" data-es="Amazon ↗">Amazon ↗</span>
+          </div>
+        </a>
+        <a class="book fade" href="https://www.amazon.es/dp/B0HFVVQ5NM" target="_blank" rel="noopener">
+          <div class="cover"><img src="assets/books/el-listin.jpg" alt="EL LISTÍN — Madrid 1987" loading="lazy"></div>
+          <div class="meta">
+            <div class="n">/02</div>
+            <h3>EL LISTÍN — Madrid 1987</h3>
+            <p data-en="Madrid, 1987. Forty thousand names. One killer. A crime novel built as an elimination puzzle — every clue counts." data-es="Madrid, 1987. Cuarenta mil nombres. Un asesino. Una novela de crímenes construida como puzzle de eliminación — cada pista cuenta.">Madrid, 1987. Forty thousand names. One killer.</p>
+            <span class="amz" data-en="Amazon ↗" data-es="Amazon ↗">Amazon ↗</span>
+          </div>
+        </a>
+        <a class="book fade" href="https://www.amazon.es/dp/B0HFPXTW4V" target="_blank" rel="noopener">
+          <div class="cover"><img src="assets/books/chatgpt-profesionales.jpg" alt="ChatGPT para Profesionales" loading="lazy"></div>
+          <div class="meta">
+            <div class="n">/03</div>
+            <h3>ChatGPT para Profesionales</h3>
+            <p data-en="200 prompts to automate your work. The practical guide to applied AI — the field edition of what I do every day." data-es="200 prompts para automatizar tu trabajo. La guía práctica de IA aplicada — la edición de campo de lo que hago cada día.">200 prompts to automate your work.</p>
+            <span class="amz" data-en="Amazon ↗" data-es="Amazon ↗">Amazon ↗</span>
+          </div>
+        </a>
+      </div>
+      <div class="series fade">
+        <span class="series-tag" data-en="The AI workbook series" data-es="La serie de guías IA">The AI workbook series</span>
+        <div class="series-links">
+          <a href="https://www.amazon.es/dp/B0H6Y7P94G" target="_blank" rel="noopener">ChatGPT para Profesores</a>
+          <a href="https://www.amazon.es/dp/B0GX2YCSBH" target="_blank" rel="noopener">ChatGPT para Abogados</a>
+          <a href="https://www.amazon.es/dp/B0H6YB2TMG" target="_blank" rel="noopener">ChatGPT para Recursos Humanos</a>
+          <a href="https://www.amazon.es/dp/B0GXNTJPXD" target="_blank" rel="noopener">ChatGPT para Agentes Inmobiliarios</a>
+        </div>
+      </div>
+      <div class="books-cta fade">
+        <!-- REEMPLAZAR con el enlace publico de Author Central de David (amazon.es/stores/author/...) -->
+        <a class="btn" href="https://www.amazon.es/stores/author/REEMPLAZAR" target="_blank" rel="noopener" data-magnet data-en="<span>All books on Amazon</span>" data-es="<span>Todos los libros en Amazon</span>"><span>All books on Amazon</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 CONTACT -->
   <section id="contact">
     <div class="wrap">
-      <div class="sec-tag" data-en="06 — Let's Build What's Next" data-es="06 — Construyamos lo que viene">06 — Let's Build What's Next</div>
+      <div class="sec-tag" data-en="07 — Let's Build What's Next" data-es="07 — Construyamos lo que viene">07 — Let's Build What's Next</div>
       <h2 data-en="If you're building what's next <em>with AI</em>, let's talk." data-es="Si estás construyendo lo que viene <em>con IA</em>, hablemos.">If you're building what's next <em>with AI</em>, let's talk.</h2>
       <div class="roles"><b data-en="AI Director" data-es="AI Director">AI Director</b><span> · </span><b data-en="Head of AI" data-es="Head of AI">Head of AI</b><span> · </span><b data-en="Technology Director" data-es="Technology Director">Technology Director</b><span> · </span><b data-en="CIO" data-es="CIO">CIO</b><span> · </span><b data-en="CTO" data-es="CTO">CTO</b><span> · </span><b data-en="Innovation Director" data-es="Innovation Director">Innovation Director</b></div>
       <div class="ctas">
@@ -720,7 +795,7 @@ document.querySelectorAll('[data-magnet]').forEach(function(el){
 
 /* progress bar + nav active */
 gsap.to('#progress', {scaleX:1, ease:'none', scrollTrigger:{trigger:document.body, start:'top top', end:'bottom bottom', scrub:0.4}});
-var secs = ['about','capabilities','career','mindset','difference','contact'];
+var secs = ['about','capabilities','career','mindset','difference','books','contact'];
 var navLinks = document.querySelectorAll('#nav .links a');
 secs.forEach(function(id){
   ScrollTrigger.create({trigger:'#'+id, start:'top 55%', end:'bottom 45%',
