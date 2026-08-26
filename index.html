@@ -218,6 +218,12 @@
 
   #progress{position:fixed;top:0;left:0;height:2px;width:100%;z-index:60;transform-origin:left;transform:scaleX(0);background:linear-gradient(90deg,var(--blue),var(--orange))}
 
+  .marquee{position:relative;width:100vw;left:50%;transform:translateX(-50%);overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:1rem 0;margin:0 0 3.6rem;pointer-events:none}
+  .marquee .track{display:flex;gap:3rem;width:max-content;animation:scroll 30s linear infinite;white-space:nowrap}
+  .marquee span{font-family:var(--disp);font-size:1.15rem;color:var(--dim);letter-spacing:.14em}
+  .marquee span i{color:var(--green);font-style:normal;margin:0 .5rem}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
   /* ---------- books ---------- */
   #books .book-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-top:3rem}
   @media (max-width:1100px){#books .book-grid{grid-template-columns:repeat(2,1fr)}}
@@ -329,6 +335,11 @@
     </div>
     <div class="scroll-hint fade" data-en="<span>Scroll</span><div class='line'></div>" data-es="<span>Scroll</span><div class='line'></div>"><span>Scroll</span><div class="line"></div></div>
   </section>
+
+  <div class="marquee"><div class="track">
+    <span>STRATEGY<i>→</i>EXECUTION<i>✦</i>AGENT GOVERNANCE<i>✦</i>QUALITY GATES<i>✦</i>ENTERPRISE AI<i>✦</i>25+ YEARS<i>✦</i></span>
+    <span>STRATEGY<i>→</i>EXECUTION<i>✦</i>AGENT GOVERNANCE<i>✦</i>QUALITY GATES<i>✦</i>ENTERPRISE AI<i>✦</i>25+ YEARS<i>✦</i></span>
+  </div></div>
 
   <!-- 01 ABOUT -->
   <section id="about">
